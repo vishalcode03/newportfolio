@@ -1,0 +1,419 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vishal chaturvedi | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="light-mode.css">
+    <link rel="stylesheet" href="transitions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen Logic -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loader">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" class="loader-circle" />
+                </svg>
+            </div>
+            <h2 class="loading-text">Loading<span class="loading-dots">...</span></h2>
+        </div>
+    </div>
+
+    <div id="static-background"></div>
+    <div id="particles-js"></div>
+
+    <!-- Logo -->
+    <div class="logo">Portfolio</div>
+
+    <!-- Hamburger Menu Button (mobile only) -->
+    <div class="hamburger-menu">
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <button class="nav-btn" data-section="hero">Home</button>
+        <button class="nav-btn" data-section="about">About</button>
+        <button class="nav-btn" data-section="skills">Skills</button>
+        <button class="nav-btn" data-section="projects">Projects</button>
+        <button class="nav-btn" data-section="certificates">Certificates</button>
+        <button class="nav-btn" data-section="contact">Contact</button>
+        <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+   <!-- Hero Section -->
+    <section id="hero" class="section">
+    <div class="hero-content">
+        <h1 class="neon-text typing-animation">Vishal Chaturvedi</h1>
+        <h2 class="neon-subtext">Full Stack Developer (MERN) | Java & Spring Boot Enthusiast</h2>
+        <div class="hero-btns">
+            <a href="#projects" class="btn nav-btn pulse-animation" id="view-projects-btn">
+                View Projects <i class="fas fa-arrow-down"></i>
+            </a>
+            <a href="resume.pdf" class="btn nav-btn pulse-animation" id="download-cv-btn" download="Vishal_Chaturvedi_CV.pdf">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="avatar-container">
+                    <img src="avatar.png" alt="Avatar" class="avatar hover-glow">
+                    <div class="status-indicator">
+                        <div class="status-dot pulse"></div>
+                        <span>Available for Collaborations</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="highlight-text">MCA graduate and passionate Java developer with hands-on experience in building robust, scalable applications using Java, Spring Boot, and Spring AI.</p>
+                    <div class="timeline">
+                        <div class="timeline-item hover-float">
+                            <i class="fas fa-university"></i>
+                            <div class="timeline-content">
+                                <h3>2024-2026</h3>
+                                <p>MASTER OF COMPUTER APPLICATION, (MCA) </p>
+                                <p>KIET Group of Institutions, Ghaziabad </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item hover-float">
+                            <i class="fas fa-school"></i>
+                            <div class="timeline-content">
+                                <h3>2020-2023</h3>
+                                <p> Bachelor of Computer Application </p>
+                                <p>Narayan Group Of Institutions, Etawah</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="timeline-item hover-float">
+                            <i class="fas fa-school"></i>
+                            <div class="timeline-content">
+                                <h3>2019-2020</h3>
+                                <p> Intermediate </p>
+                                <p>CH. V. S. BH. V. Inter College, Auraiya</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in">
+        <div class="section-content">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1:-->
+                <div class="project-card hover-glow" data-category="transpiler">
+                    <span class="ai-tag">✨ Made with AI</span>
+                    <img src="project1.jpeg" alt="Sanskrit As Coding Language" class="project-image">
+                    <div class="project-content">
+                        <h3><i class="fa-solid fa-cart-shopping"></i>KIET E-Bazaar</h3>
+                        <p>Devloped a online marketplace platform for our college community.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">MERN</span>
+                            <span class="tech-tag">Restful API</span>
+                        </div>
+                        <button class="btn view-source-btn pulse-animation">View Source Code</button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card hover-glow" data-category="cv">
+                    <span class="ai-tag">✨ Made with AI</span>
+                    <img src="project2.png" alt="CV Project" class="project-image">
+                    <div class="project-content">
+                        <h3><i class="fas fa-eye"></i>Real Time Chat Application</h3>
+                        <p>Developed real-time chat application system using MERN Stack.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">MERN</span>
+                            <span class="tech-tag">Socket IO</span>
+                            <span class="tech-tag">Daisy UI</span>
+                        </div>
+                        <button class="btn view-source-btn pulse-animation">View Source Code</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card hover-glow" data-category="web">
+                    <span class="ai-tag">✨ Made with AI</span>
+                    <img src="project3.png" alt="Web Project" class="project-image">
+                    <div class="project-content">
+                        <h3><i class="fas fa-laptop-code"></i> Portfolio Website</h3>
+                        <p>Designed and developed responsive portfolio website with modern UI/UX.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <button class="btn view-source-btn pulse-animation">View Source Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+        <div class="section-content">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category hover-float">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fab fa-java"></i> java</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fa-brands fa-js"></i> Javascripts</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="78"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fas fa-code"></i> C/C++</span>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="87"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category hover-float">
+                    <h3><i class="fa-solid fa-database"></i>Database & Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fa-solid fa-database"></i> Mongo DB</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fas fa-brain"></i>My Sql</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fa-brands fa-react"></i>React JS</span>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="87"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="fa-brands fa-github"></i>Git & Github</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="92"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Certificates Section -->
+       <section id="certificates" class="section fade-in">
+        <div class="section-content">
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card hover-glow" data-aos="zoom-in">
+                    <img src="Certificates/certificate1.jpg" alt="core Java certification" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>core Java certification</h3>
+                        <p>by Smart Programming</p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow" data-aos="zoom-in">
+                    <img src="Certificates/certificate2.jpg" alt="Spring Boot" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>SpringBoot certification</h3>
+                        <p>by KIET Group Of Institutions </p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow" data-aos="zoom-in">
+                    <img src="Certificates/certificate3.png" alt="Unlocking the power of javascript" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>Unlocking the power of javascript </h3>
+                        <p>by Scaler Academy</p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow" data-aos="zoom-in">
+                    <img src="Certificates/certificate4.jpg" alt="Python Essentials" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>Python Essentials</h3>
+                        <p>by Cisco Networking Academy</p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow" data-aos="zoom-in">
+                    <img src="Certificates/certificate5.jpg" alt="AWS Cloud Foundation" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>AWS Cloud Foundation</h3>
+                        <p>by AWS Academy </p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow" data-aos="zoom-in">
+                    <img src="Certificates/certificate6.jpg" alt="Java Basic" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>Java Basic </h3>
+                        <p>by Learn tube (Career Ninja) </p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow hidden-certificate" data-aos="zoom-in">
+                    <img src="Certificates/certificate7.jpg" alt="what is Genrative AI" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>what is Genrative AI</h3>
+                        <p>by KIET Group Of Institutions  </p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow hidden-certificate" data-aos="zoom-in">
+                    <img src="Certificates/certificate8.jpg" alt="what is Genrative AI" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>what is Genrative AI</h3>
+                        <p>by Linkedin Learning </p>
+                    </div>
+                </div>
+                <div class="certificate-card hover-glow hidden-certificate" data-aos="zoom-in">
+                    <img src="Certificates/certificate9.jpg" alt="IOT Foundation : Operating System Fundamentals" class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>IOT Foundation : Operating System Fundamentals</h3>
+                        <p>by Linkedin Learning  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn" id="view-more-certificates">
+                    <i class="fas fa-chevron-down"></i>
+                    <span class="btn-text">View More</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="section-content">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-wrapper">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="user_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="user_email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-comment"></i>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn pulse-animation">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                <div class="contact-info hover-glow">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Based in</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/vishalcode03" class="social-icon hover-glow">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vishalcode03" class="social-icon hover-glow">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://codolio.com/profile/Vishal@123" class="social-icon hover-glow">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </a>
+                        <a href="chaturvedivishal366@gmail.com" class="social-icon hover-glow">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.hackerrank.com/profile/vishalcode03" class="social-icon hover-glow">
+                            <i class="fa-brands fa-hackerrank"></i>
+
+                        </a>
+                        <a href="https://www.codechef.com/users/vishalcode03" class="social-icon hover-glow">
+                            <i class="fa-brands fa-free-code-camp"></i>
+                        </a>
+                        <a href="https://stackoverflow.com/users/26490332/vishal-chaturvedi3" class="social-icon hover-glow">
+                            <i class="fa-brands fa-stack-overflow"></i>
+                        </a>
+                        <a href="https://takeuforward.org/profile/sanuchaturvedi944@gmail.com" class="social-icon hover-glow">
+                           <i class="fa-solid fa-tape"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Footer -->
+    <footer>
+        <p id="visit-counter">Portfolio Visits: 227</p>
+        <p>&copy; 2025 vishal chaturvedi . All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
