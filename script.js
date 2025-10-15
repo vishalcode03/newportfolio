@@ -216,11 +216,11 @@ document.querySelectorAll('.view-source-btn').forEach(button => {
     let githubLink = 'https://github.com/vishalcode03/';
     
     if (projectCard.dataset.category === 'transpiler') {
-      githubLink += 'chat';
+      githubLink += 'Kiet-E-Bazaar';
     } else if (projectCard.dataset.category === 'cv') {
       githubLink += 'chat';
     } else {
-      githubLink += 'my-portfolio';
+      githubLink += 'newportfolio';
     }
     
     window.open(githubLink, '_blank');
